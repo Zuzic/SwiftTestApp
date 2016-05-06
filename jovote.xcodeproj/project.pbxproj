@@ -17,6 +17,10 @@
 		11190B781CDA2A72005647D8 /*  Authorization.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11190B771CDA2A72005647D8 /*  Authorization.storyboard */; };
 		11190B7C1CDA2CDA005647D8 /* SideBarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11190B7B1CDA2CDA005647D8 /* SideBarTableViewController.swift */; };
 		11190B7E1CDA3099005647D8 /* SideBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11190B7D1CDA3099005647D8 /* SideBar.swift */; };
+		115DDEF01CDB3CA1005F8047 /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115DDEEF1CDB3CA1005F8047 /* AuthorizationViewController.swift */; };
+		1179E4AE1CDCA4B900ED839C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1179E4AD1CDCA4B900ED839C /* LoginViewController.swift */; };
+		1179E4B01CDCA4E200ED839C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1179E4AF1CDCA4E200ED839C /* RegisterViewController.swift */; };
+		1179E4B21CDCBE4300ED839C /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1179E4B11CDCBE4300ED839C /* Array+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +43,7 @@
 /* Begin PBXFileReference section */
 		11190B451CDA294B005647D8 /* jovote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jovote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11190B481CDA294B005647D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		11190B4A1CDA294B005647D8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		11190B4A1CDA294B005647D8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../ViewController.swift; sourceTree = "<group>"; };
 		11190B4D1CDA294B005647D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		11190B4F1CDA294B005647D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		11190B521CDA294B005647D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -53,6 +57,10 @@
 		11190B771CDA2A72005647D8 /*  Authorization.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = " Authorization.storyboard"; sourceTree = "<group>"; };
 		11190B7B1CDA2CDA005647D8 /* SideBarTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideBarTableViewController.swift; sourceTree = "<group>"; };
 		11190B7D1CDA3099005647D8 /* SideBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideBar.swift; sourceTree = "<group>"; };
+		115DDEEF1CDB3CA1005F8047 /* AuthorizationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
+		1179E4AD1CDCA4B900ED839C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		1179E4AF1CDCA4E200ED839C /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		1179E4B11CDCBE4300ED839C /* Array+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +115,6 @@
 				11190B791CDA2CA4005647D8 /* Controllers */,
 				11190B761CDA2A31005647D8 /* Storyboards */,
 				11190B481CDA294B005647D8 /* AppDelegate.swift */,
-				11190B4A1CDA294B005647D8 /* ViewController.swift */,
 				11190B4F1CDA294B005647D8 /* Assets.xcassets */,
 				11190B511CDA294B005647D8 /* LaunchScreen.storyboard */,
 				11190B541CDA294B005647D8 /* Info.plist */,
@@ -145,7 +152,11 @@
 		11190B791CDA2CA4005647D8 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				11190B4A1CDA294B005647D8 /* ViewController.swift */,
 				11190B7B1CDA2CDA005647D8 /* SideBarTableViewController.swift */,
+				115DDEEF1CDB3CA1005F8047 /* AuthorizationViewController.swift */,
+				1179E4AD1CDCA4B900ED839C /* LoginViewController.swift */,
+				1179E4AF1CDCA4E200ED839C /* RegisterViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -154,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				11190B7D1CDA3099005647D8 /* SideBar.swift */,
+				1179E4B11CDCBE4300ED839C /* Array+Extension.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -290,10 +302,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1179E4AE1CDCA4B900ED839C /* LoginViewController.swift in Sources */,
 				11190B4B1CDA294B005647D8 /* ViewController.swift in Sources */,
+				1179E4B01CDCA4E200ED839C /* RegisterViewController.swift in Sources */,
 				11190B7C1CDA2CDA005647D8 /* SideBarTableViewController.swift in Sources */,
 				11190B7E1CDA3099005647D8 /* SideBar.swift in Sources */,
+				115DDEF01CDB3CA1005F8047 /* AuthorizationViewController.swift in Sources */,
 				11190B491CDA294B005647D8 /* AppDelegate.swift in Sources */,
+				1179E4B21CDCBE4300ED839C /* Array+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,6 +456,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.jointvote.jovote;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -451,6 +468,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.jointvote.jovote;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -519,6 +537,7 @@
 				11190B6F1CDA294B005647D8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		11190B701CDA294B005647D8 /* Build configuration list for PBXNativeTarget "jovoteTests" */ = {
 			isa = XCConfigurationList;
@@ -527,6 +546,7 @@
 				11190B721CDA294B005647D8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		11190B731CDA294B005647D8 /* Build configuration list for PBXNativeTarget "jovoteUITests" */ = {
 			isa = XCConfigurationList;
@@ -535,6 +555,7 @@
 				11190B751CDA294B005647D8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

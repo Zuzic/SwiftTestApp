@@ -21,6 +21,14 @@
             </objects>
             <point key="canvasLocation" x="-127" y="1103"/>
         </scene>
+        <!--AuthorizationStoryboard-->
+        <scene sceneID="yao-eZ-N7u">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="AuthorizationStoryboard" storyboardName=" Authorization" referencedIdentifier="AuthorizationStoryboard" id="vNF-Rl-Wdb" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dnx-fb-I95" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1037.5" y="601"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="ARs-Yo-Loa">
             <objects>
@@ -35,10 +43,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="NXz-jF-rae"/>
+                    <connections>
+                        <segue destination="vNF-Rl-Wdb" kind="show" identifier="Authorization" id="qcG-ZP-c2t"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qz5-Zu-eg2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="567" y="1103"/>
+            <point key="canvasLocation" x="529" y="1103"/>
         </scene>
     </scenes>
 </document>

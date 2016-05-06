@@ -15,7 +15,7 @@ class ViewController: UIViewController, SideBarDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.blueColor()
-        sideBar = SideBar(sourceView: self.view, menuItems: ["firs item", "second item", "third item"], navigationBar: (self.navigationController?.navigationBar)!)
+        sideBar = SideBar(sourceView: self.view, menuItems: ["firs item", "second item", "third item"])
         sideBar.delegate = self
     }
 
@@ -26,22 +26,12 @@ class ViewController: UIViewController, SideBarDelegate {
     
     func sideBarDidSelectButtonAtIndex(index: Int) {
         if index == 0 {
-            self.view.backgroundColor = UIColor.redColor()
+            self.performSegueWithIdentifier("Authorization", sender: nil)
         }else if index == 1 {
             self.view.backgroundColor = UIColor.greenColor()
         }else if index == 2 {
             self.view.backgroundColor = UIColor.orangeColor()
         }
     }
-    
-//    func SideBarWillOpen() {
-//        self.navigationController?.navigationBar.frame = CGRectMake(sideBar.barWidth, (self.navigationController?.navigationBar.frame.origin.y)!, (self.navigationController?.navigationBar.frame.size.width)!, (self.navigationController?.navigationBar.frame.size.height)!)
-//    }
-//    
-//    func sideBarWillClose() {
-//        self.navigationController?.navigationBar.frame = CGRectMake(0, (self.navigationController?.navigationBar.frame.origin.y)!, (self.navigationController?.navigationBar.frame.size.width)!, (self.navigationController?.navigationBar.frame.size.height)!)
-//    }
-
-
 }
 

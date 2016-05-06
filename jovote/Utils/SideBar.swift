@@ -50,13 +50,6 @@ class SideBar: NSObject, SideBarTableViewControllerDelegate {
         originView.addGestureRecognizer(hideGuesterRecodnizer)
     }
     
-    convenience init(sourceView:UIView, menuItems:Array<String>, navigationBar: UINavigationBar) {
-         self.init(sourceView: sourceView, menuItems: menuItems)
-        
-        barAnimator = UIDynamicAnimator(referenceView: navigationBar)
-        
-    }
-    
     func  setUpSideBar(){
         sideBarContainerView.frame = CGRectMake(-barWidth - 1, originView.frame.origin.y, barWidth, originView.frame.size.height)
         sideBarContainerView.backgroundColor = UIColor.clearColor()
@@ -105,12 +98,10 @@ class SideBar: NSObject, SideBarTableViewControllerDelegate {
         let gravityBahavior:UIGravityBehavior = UIGravityBehavior(items: [sideBarContainerView])
         gravityBahavior.gravityDirection = CGVectorMake(gravityX, 0)
         animator.addBehavior(gravityBahavior)
-        //barAnimator.addBehavior(gravityBahavior)
         
         let collisionBehavior:UICollisionBehavior = UICollisionBehavior(items: [sideBarContainerView])
         collisionBehavior.addBoundaryWithIdentifier("sideBarBoundary", fromPoint: CGPointMake(boundaryX, 20), toPoint: CGPointMake(boundaryX, originView.frame.size.height))
         animator.addBehavior(collisionBehavior)
-        barAnimator.addBehavior(collisionBehavior)
         
         let pushBahavior:UIPushBehavior = UIPushBehavior(items: [sideBarContainerView], mode: .Instantaneous)
         pushBahavior.magnitude = magnitude
@@ -120,7 +111,6 @@ class SideBar: NSObject, SideBarTableViewControllerDelegate {
         let sideBarBehavior:UIDynamicItemBehavior = UIDynamicItemBehavior(items: [sideBarContainerView])
         sideBarBehavior.elasticity = 0.3
         animator.addBehavior(sideBarBehavior)
-       // barAnimator.addBehavior(sideBarBehavior)
     }
 
     

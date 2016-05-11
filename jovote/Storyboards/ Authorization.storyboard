@@ -91,6 +91,10 @@
         <scene sceneID="KfM-cH-xe7">
             <objects>
                 <viewController id="JhJ-J3-qNm" customClass="RegisterViewController" customModule="jovote" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Mrb-qB-30r"/>
+                        <viewControllerLayoutGuide type="bottom" id="QYu-Os-4wO"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="dKh-ZP-jSH">
                         <rect key="frame" x="0.0" y="0.0" width="260" height="448"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -99,21 +103,33 @@
                                 <rect key="frame" x="0.0" y="0.0" width="260" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="JhJ-J3-qNm" id="4ah-Rf-81i"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ctb-gO-ded">
                                 <rect key="frame" x="0.0" y="50" width="260" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="JhJ-J3-qNm" id="hKC-v1-wxq"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VVw-NH-tDc">
                                 <rect key="frame" x="0.0" y="100" width="260" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="JhJ-J3-qNm" id="d6J-CW-8bo"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B4t-qM-UII">
                                 <rect key="frame" x="0.0" y="150" width="260" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="JhJ-J3-qNm" id="Hgr-Hm-ZRm"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sKM-nh-IzN">
                                 <rect key="frame" x="0.0" y="220" width="260" height="34"/>
@@ -149,6 +165,7 @@
                         <outlet property="emailField" destination="ctb-gO-ded" id="qnJ-pr-Tgv"/>
                         <outlet property="nameField" destination="Ccl-h6-2If" id="kca-eX-JCq"/>
                         <outlet property="passwordField" destination="VVw-NH-tDc" id="ZwQ-Gv-Fy6"/>
+                        <outlet property="topConstaint" destination="lOe-tv-Hno" id="CjJ-ON-Gt2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b6J-cl-UWw" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -159,6 +176,10 @@
         <scene sceneID="rYQ-6c-dOp">
             <objects>
                 <viewController id="d94-yD-8Et" customClass="LoginViewController" customModule="jovote" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Udp-2z-hN3"/>
+                        <viewControllerLayoutGuide type="bottom" id="I3B-fw-4wh"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="f66-GT-vFE">
                         <rect key="frame" x="0.0" y="0.0" width="260" height="448"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

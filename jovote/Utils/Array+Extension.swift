@@ -8,26 +8,16 @@
 
 import Foundation
 
-infix operator >!< {}
-
-func >!< (object1: AnyObject!, object2: AnyObject!) -> Bool {
-    return (object_getClassName(object1) == object_getClassName(object2))
-}
-
 extension Array{
-    func findElementsOfClass<L:BooleanType>(predicate: Array.Generator.Element -> L) -> Array.Generator.Element?{
-        //var findElement:NSMutableArray = NSMutableArray()
-        
-        
-        
+    func findElementsOfClass(@noescape predicate: Array.Generator.Element -> Bool) -> Array?{
+        var findElement:Array = Array()
         for item in self{            
             if predicate(item){
-                return item
-            }
-            else{
-                return nil
+               findElement.append(item)
             }
         }
-        return nil
+        return findElement
     }
 }
+
+

@@ -24,26 +24,17 @@ class RegisterViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var confirmPasswordField: UITextField!
     @IBOutlet weak var enterButton: UIButton!
     
+    @IBOutlet weak var topConstaint: NSLayoutConstraint!
     
     // MARK: - Life cyrcle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        let text:String = "test"
-        let text1:String = "test"
-        let array:Array = [0, 1, 2]
-        
-        print("String vs. Array: \(text as AnyObject >!< NSArray().classForCoder as AnyObject )")
-        print("String vs. String: \(text as AnyObject >!< text1 as AnyObject )")
-        
-        let z = 30%
-        print(z)
 
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        
         
         NSNotificationCenter.defaultCenter().addObserver(self,
                                                          selector: #selector(RegisterViewController.keyboardWillShow(_:)),
@@ -54,6 +45,11 @@ class RegisterViewController: UIViewController, UITextFieldDelegate{
                                                          selector: #selector(RegisterViewController.keyboardWillHide(_:)),
                                                          name: UIKeyboardWillHideNotification,
                                                          object: self.view.window)
+        
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: .Default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
+        self.navigationController?.navigationBar.translucent = true
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -77,26 +73,33 @@ class RegisterViewController: UIViewController, UITextFieldDelegate{
     
     // MARK: - Observers methods
     func keyboardWillShow(notify:NSNotificationCenter){
-        print("keyboardWillShow")
+        
     }
     
     func keyboardWillHide(notify:NSNotificationCenter){
-        print("keyboardWillHide")
+        
     }
     
     
     // MARK: - Utils methods
     func hideKeyboard() {
-        //let index = self.view.subviews.findElementsOfClass({$0.dynamicType == UITextField().dynamicType})
-        
-        
+        let hideArr: Array? = self.view.subviews.findElementsOfClass({ $0.classForCoder == UITextField().classForCoder  && $0.isFirstResponder()} )
+        for item in hideArr! {
+            item.resignFirstResponder()
+        }
     }
     
     
     
     // MARK: - UITextFieldDelegate
     
+    func textFieldDidBeginEditing(textField: UITextField) {
+        print("textFieldDidBeginEditing")
+    }
     
+    func textFieldDidEndEditing(textField: UITextField) {
+        print("textFieldDidEndEditing")
+    }
     
     /*
     // MARK: - Navigation

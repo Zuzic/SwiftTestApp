@@ -39,7 +39,10 @@ class AuthorizationViewController: UIViewController {
         self.registerContainer.alpha = index == 1 ? 1 : 0
     }
     
-    
+    //MARK: Touche methods
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        
+    }
 
     //MARK: Action methods
     @IBAction func showComponent(sender: AnyObject) {

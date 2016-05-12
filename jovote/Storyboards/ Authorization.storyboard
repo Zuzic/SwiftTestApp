@@ -20,6 +20,20 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bg_authorization" translatesAutoresizingMaskIntoConstraints="NO" id="XUz-ly-d0g">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CkG-th-Kxc">
+                                <rect key="frame" x="170" y="152" width="260" height="448"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="d94-yD-8Et" kind="embed" identifier="LoginContainer" id="fST-CA-cup"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7RL-LI-veW">
+                                <rect key="frame" x="170" y="152" width="260" height="448"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="JhJ-J3-qNm" kind="embed" identifier="RegisterContainer" id="CdC-sS-j8Z"/>
+                                </connections>
+                            </containerView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="JoVote" translatesAutoresizingMaskIntoConstraints="NO" id="Xpp-8h-EFO">
                                 <rect key="frame" x="221" y="0.0" width="158" height="84"/>
                                 <constraints>
@@ -42,20 +56,6 @@
                                     <action selector="showComponent:" destination="Gvx-jZ-GdV" eventType="valueChanged" id="rDW-gb-cCi"/>
                                 </connections>
                             </segmentedControl>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7RL-LI-veW">
-                                <rect key="frame" x="170" y="152" width="260" height="448"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <segue destination="JhJ-J3-qNm" kind="embed" id="CdC-sS-j8Z"/>
-                                </connections>
-                            </containerView>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CkG-th-Kxc">
-                                <rect key="frame" x="170" y="152" width="260" height="448"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <segue destination="d94-yD-8Et" kind="embed" id="fST-CA-cup"/>
-                                </connections>
-                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -95,11 +95,11 @@
                         <viewControllerLayoutGuide type="top" id="Mrb-qB-30r"/>
                         <viewControllerLayoutGuide type="bottom" id="QYu-Os-4wO"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="dKh-ZP-jSH">
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="dKh-ZP-jSH">
                         <rect key="frame" x="0.0" y="0.0" width="260" height="448"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ccl-h6-2If">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ccl-h6-2If" customClass="JVTAuthorizationTextField" customModule="jovote" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="260" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -107,7 +107,7 @@
                                     <outlet property="delegate" destination="JhJ-J3-qNm" id="4ah-Rf-81i"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ctb-gO-ded">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ctb-gO-ded" customClass="JVTAuthorizationTextField" customModule="jovote" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="50" width="260" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -115,7 +115,7 @@
                                     <outlet property="delegate" destination="JhJ-J3-qNm" id="hKC-v1-wxq"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VVw-NH-tDc">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VVw-NH-tDc" customClass="JVTAuthorizationTextField" customModule="jovote" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="100" width="260" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -123,7 +123,7 @@
                                     <outlet property="delegate" destination="JhJ-J3-qNm" id="d6J-CW-8bo"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B4t-qM-UII">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B4t-qM-UII" customClass="JVTAuthorizationTextField" customModule="jovote" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="150" width="260" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>

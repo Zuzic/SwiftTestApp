@@ -8,8 +8,10 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, AuthorizationViewControllerProtocol {
 
+    weak var delegate:AuthorizationViewController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,7 +23,11 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    //MARK: - Protocols
     
+    func someMethod(){
+    
+    }
     
 
     /*

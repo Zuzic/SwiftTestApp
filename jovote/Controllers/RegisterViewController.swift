@@ -8,23 +8,21 @@
 
 import UIKit
 
-postfix operator % {}
 
-postfix func % (percentage: Int) -> Double {
-    return (Double(percentage) / 100)
-}
 
-class RegisterViewController: UIViewController, UITextFieldDelegate{
+class RegisterViewController: UIViewController, UITextFieldDelegate, AuthorizationViewControllerProtocol{
 
     
     // MARK: - Properties
-    @IBOutlet weak var nameField: UITextField!
-    @IBOutlet weak var emailField: UITextField!
-    @IBOutlet weak var passwordField: UITextField!
-    @IBOutlet weak var confirmPasswordField: UITextField!
+    @IBOutlet weak var nameField: JVTAuthorizationTextField!
+    @IBOutlet weak var emailField: JVTAuthorizationTextField!
+    @IBOutlet weak var passwordField: JVTAuthorizationTextField!
+    @IBOutlet weak var confirmPasswordField: JVTAuthorizationTextField!
     @IBOutlet weak var enterButton: UIButton!
     
     @IBOutlet weak var topConstaint: NSLayoutConstraint!
+    
+    weak var delegate:AuthorizationViewController?
     
     // MARK: - Life cyrcle
     override func viewDidLoad() {
@@ -38,7 +36,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate{
         
         NSNotificationCenter.defaultCenter().addObserver(self,
                                                          selector: #selector(RegisterViewController.keyboardWillShow(_:)),
-                                                         name: UIKeyboardDidShowNotification,
+                                                         name: UIKeyboardWillShowNotification,
                                                          object: self.view.window)
         
         NSNotificationCenter.defaultCenter().addObserver(self,
@@ -58,6 +56,10 @@ class RegisterViewController: UIViewController, UITextFieldDelegate{
         NSNotificationCenter.defaultCenter().removeObserver(self)
         
     }
+    
+    deinit{
+       delegate = nil
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -72,12 +74,35 @@ class RegisterViewController: UIViewController, UITextFieldDelegate{
     }
     
     // MARK: - Observers methods
-    func keyboardWillShow(notify:NSNotificationCenter){
+    func keyboardWillShow(notify:NSNotification){
+        let userInfo = notify.userInfo!
+        let keyboardSpeed = userInfo[UIKeyboardAnimationDurationUserInfoKey] as! Double
+        let screenSize: CGRect = UIScreen.mainScreen().bounds
+        let yContainerPosition:CGFloat = screenSize.size.height - self.view.bounds.size.height
         
+        let keyboardScreenEndFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
+        let visibleViewArray: Array? = self.view.subviews.findElementsOfClass({ $0.classForCoder == UITextField().classForCoder  && $0.isFirstResponder()})
+        let visibleView = visibleViewArray?.first
+        
+        if let view = visibleView {
+            let yPoint = yContainerPosition + view.frame.origin.y + view.frame.size.height - keyboardScreenEndFrame.origin.y
+            if yPoint > 0 {
+                UIView.animateWithDuration(keyboardSpeed, animations: {
+                    self.topConstaint.constant = -yPoint
+                    self.view.layoutIfNeeded()
+                })
+            }
+        }
     }
     
-    func keyboardWillHide(notify:NSNotificationCenter){
+    func keyboardWillHide(notify:NSNotification){
+        let userInfo = notify.userInfo!
+        let keyboardSpeed = userInfo[UIKeyboardAnimationDurationUserInfoKey] as! Double
         
+        UIView.animateWithDuration(keyboardSpeed, animations: {
+            self.topConstaint.constant = 0
+            self.view.layoutIfNeeded()
+        })
     }
     
     
@@ -89,8 +114,6 @@ class RegisterViewController: UIViewController, UITextFieldDelegate{
         }
     }
     
-    
-    
     // MARK: - UITextFieldDelegate
     
     func textFieldDidBeginEditing(textField: UITextField) {
@@ -99,6 +122,11 @@ class RegisterViewController: UIViewController, UITextFieldDelegate{
     
     func textFieldDidEndEditing(textField: UITextField) {
         print("textFieldDidEndEditing")
+    }
+    
+    // MARK: - Protocols
+    func someMethod() {
+        hideKeyboard()
     }
     
     /*

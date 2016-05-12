@@ -7,12 +7,20 @@
 //
 
 import UIKit
+protocol AuthorizationViewControllerProtocol
+{
+    func someMethod()  // here is the method declaration
+    
+}
 
 class AuthorizationViewController: UIViewController {
 
     @IBOutlet weak var loginContainer: UIView!
     @IBOutlet weak var registerContainer: UIView!
     @IBOutlet weak var segmentControl: UISegmentedControl!
+    
+    var registeController: RegisterViewController?
+    var loginController: LoginViewController?
     
     
     override func viewDidLoad() {
@@ -35,13 +43,17 @@ class AuthorizationViewController: UIViewController {
     
     //MARK: Utils methods
     func showContainer(selectSegmentIndex index:Int){
-        self.loginContainer.alpha = index == 0 ? 1 : 0
-        self.registerContainer.alpha = index == 1 ? 1 : 0
+        loginContainer.alpha = index == 0 ? 1 : 0
+        registerContainer.alpha = index == 1 ? 1 : 0
     }
     
     //MARK: Touche methods
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        
+        if loginContainer.alpha == 0 {
+            if let controller = registeController{
+                controller.someMethod()
+            }
+        }
     }
 
     //MARK: Action methods
@@ -53,14 +65,26 @@ class AuthorizationViewController: UIViewController {
         })
     }
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "RegisterContainer" {
+            if  registeController == nil{
+                registeController = (segue.destinationViewController as? RegisterViewController)!
+                registeController!.delegate = self
+            }
+        }
+        
+        if segue.identifier == "LoginContainer" {
+            if loginController == nil {
+                loginController = (segue.destinationViewController as? LoginViewController)!
+                loginController!.delegate = self
+            }
+        }
     }
-    */
+    
 
 }
+

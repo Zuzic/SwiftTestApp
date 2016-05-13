@@ -99,32 +99,51 @@
                         <rect key="frame" x="0.0" y="0.0" width="260" height="448"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ccl-h6-2If" customClass="JVTAuthorizationTextField" customModule="jovote" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="260" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" background="Text_input" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Ccl-h6-2If" customClass="JVTAuthorizationTextField" customModule="jovote" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="260" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="6yr-29-0zJ"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="JhJ-J3-qNm" id="4ah-Rf-81i"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ctb-gO-ded" customClass="JVTAuthorizationTextField" customModule="jovote" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="50" width="260" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" background="Text_input" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ctb-gO-ded" customClass="JVTAuthorizationTextField" customModule="jovote" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="51" width="260" height="31"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="1Wo-o6-3bR"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="JhJ-J3-qNm" id="hKC-v1-wxq"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VVw-NH-tDc" customClass="JVTAuthorizationTextField" customModule="jovote" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="100" width="260" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" background="Text_input" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="VVw-NH-tDc" customClass="JVTAuthorizationTextField" customModule="jovote" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="102" width="260" height="31"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="I4V-Lx-fEi"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="JhJ-J3-qNm" id="d6J-CW-8bo"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B4t-qM-UII" customClass="JVTAuthorizationTextField" customModule="jovote" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="150" width="260" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm password" textAlignment="natural" minimumFontSize="17" background="Text_input" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="B4t-qM-UII" customClass="JVTAuthorizationTextField" customModule="jovote" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="153" width="260" height="31"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="6ov-6k-JqK"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -132,7 +151,7 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sKM-nh-IzN">
-                                <rect key="frame" x="0.0" y="220" width="260" height="34"/>
+                                <rect key="frame" x="0.0" y="223" width="260" height="34"/>
                                 <state key="normal" title="Enter">
                                     <color key="titleColor" red="0.01176470588" green="0.61960784310000006" blue="0.62745098040000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -148,7 +167,7 @@
                             <constraint firstItem="B4t-qM-UII" firstAttribute="leading" secondItem="dKh-ZP-jSH" secondAttribute="leading" id="AOr-17-qxz"/>
                             <constraint firstItem="VVw-NH-tDc" firstAttribute="top" secondItem="ctb-gO-ded" secondAttribute="bottom" constant="20" id="AVp-cn-n6G"/>
                             <constraint firstItem="B4t-qM-UII" firstAttribute="top" secondItem="VVw-NH-tDc" secondAttribute="bottom" constant="20" id="FI0-B8-qHb"/>
-                            <constraint firstItem="sKM-nh-IzN" firstAttribute="top" secondItem="B4t-qM-UII" secondAttribute="bottom" constant="40" id="HQa-gj-fcE"/>
+                            <constraint firstItem="sKM-nh-IzN" firstAttribute="top" secondItem="B4t-qM-UII" secondAttribute="bottom" constant="39" id="HQa-gj-fcE"/>
                             <constraint firstItem="ctb-gO-ded" firstAttribute="leading" secondItem="dKh-ZP-jSH" secondAttribute="leading" id="MDq-9K-NIB"/>
                             <constraint firstAttribute="trailing" secondItem="Ccl-h6-2If" secondAttribute="trailing" id="XwE-4w-IyB"/>
                             <constraint firstAttribute="trailing" secondItem="B4t-qM-UII" secondAttribute="trailing" id="aFq-Pf-Roq"/>
@@ -194,5 +213,6 @@
     <resources>
         <image name="Bg_authorization" width="320" height="568"/>
         <image name="JoVote" width="157" height="83"/>
+        <image name="Text_input" width="209" height="31"/>
     </resources>
 </document>

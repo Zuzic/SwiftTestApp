@@ -44,10 +44,18 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, Authorizati
                                                          name: UIKeyboardWillHideNotification,
                                                          object: self.view.window)
         
+        NSNotificationCenter.defaultCenter().addObserver(self,
+                                                         selector: #selector(RegisterViewController.keyboardWillShow(_:)),
+                                                         name: UIKeyboardDidChangeFrameNotification,
+                                                         object: self.view.window)
+        
+        // MARK: - need delete
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: .Default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.setNavigationBarHidden(false, animated: false)
         self.navigationController?.navigationBar.translucent = true
+        
+        updateTextFieldData()
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -81,7 +89,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, Authorizati
         let yContainerPosition:CGFloat = screenSize.size.height - self.view.bounds.size.height
         
         let keyboardScreenEndFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
-        let visibleViewArray: Array? = self.view.subviews.findElementsOfClass({ $0.classForCoder == UITextField().classForCoder  && $0.isFirstResponder()})
+        let visibleViewArray: Array? = self.view.subviews.findElementsOfClass({ $0.classForCoder == JVTAuthorizationTextField().classForCoder  && $0.isFirstResponder()})
         let visibleView = visibleViewArray?.first
         
         if let view = visibleView {
@@ -108,10 +116,17 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, Authorizati
     
     // MARK: - Utils methods
     func hideKeyboard() {
-        let hideArr: Array? = self.view.subviews.findElementsOfClass({ $0.classForCoder == UITextField().classForCoder  && $0.isFirstResponder()} )
+        let hideArr: Array? = self.view.subviews.findElementsOfClass({ $0.classForCoder == JVTAuthorizationTextField().classForCoder  && $0.isFirstResponder()} )
         for item in hideArr! {
             item.resignFirstResponder()
         }
+    }
+    
+    func updateTextFieldData(){
+        nameField.addIconAndPlaceholder(UIImage(named:"Icon_login")!, placeholderText: NSLocalizedString("Sing_in_login_key", comment: "nameField"))
+        emailField.addIconAndPlaceholder(UIImage(named:"Icon_mail")!, placeholderText: NSLocalizedString("Sing_in_email_key", comment: "emailField"))
+        passwordField.addIconAndPlaceholder(UIImage(named:"Icon_password")!, placeholderText: NSLocalizedString("Sing_in_password_key", comment: "passwordField"))
+        confirmPasswordField.addIconAndPlaceholder(UIImage(named:"Icon_password")!, placeholderText: NSLocalizedString("Sing_in_password_confirm_key", comment: "confirmPasswordField"))
     }
     
     // MARK: - UITextFieldDelegate

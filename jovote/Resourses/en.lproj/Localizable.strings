@@ -1,0 +1,243 @@
+/* 
+  Localizable.strings
+  jovote
+
+  Created by Hung Vo on 5/13/16.
+  Copyright © 2016 jointvote. All rights reserved.
+*/
+
+//global
+"Error_key"                                     = "Error";
+"Warning_key"                                   = "Warning";
+"Success_key"                                   = "Success";
+"add_key"                                       = "add";
+"save_key"                                      = "save";
+"cancel_key"                                    = "cancel";
+"ok_key"                                        = "OK";
+"send_key"                                      = "send";
+"skip_key"                                      = "skip";
+"Login_key"                                     = "Log in";
+"Close_key"                                     = "Close";
+"Retry_key"                                     = "Retry";
+"Continue_key"                                  = "continue";
+
+//menu
+"MYACCOUNT"                                     = "MY ACCOUNT";
+"OPTIONS"                                       = "OPTIONS";
+"ARCHIVE"                                       = "ARCHIVE";
+"TUTORIAL"                                      = "TUTORIAL";
+"LOGOUT"                                        = "LOGOUT";
+"LOGIN"                                         = "LOGIN";
+"GUEST"                                         = "Guest";
+"Skip"                                          = "Skip";
+
+//title
+"Theme_key"                                     = "Topic";
+"Round_key"                                     = "Round";
+"Options_key"                                   = "Options";
+"My_account_key"                                = "My account";
+"Archeive_key"                                  = "Archive";
+
+//warning
+"Warning_disable_notifications_key"             = "The phone settings disable notifications";
+"Warning_block_failed_key"                      = "This screen will be developed on the next stage";
+"Warning_topic_finished_key"                    = "Topic is finished!";
+"Warning_share_link_alert_key"                  = "The link was copied. Share it!";
+
+//error
+"Error_get_topic_detail_failed_key"             = "Loading detail topic error";
+"Error_load_topic_failed_key"                   = "Loading topics error";
+"Error_delete_option_failed_key"                = "Delete option error";
+"Error_next_round_failed_key"                   = "Start next round error";
+"Error_finished_round_failed_key"               = "Finished round error";
+"Error_registr_failed_key"                      = "Registration error";
+"Error_forgot_failed_key"                       = "Forgot password error";
+"Error_connection_failed_key"                   = "Connection error";
+"Error_server_failed_key"                       = "Server connection error";
+"Error_theme_name_failed_key"                   = "Add topic name!";
+"Error_count_options_failed_key"                = "Enter at least 2 options!";
+"Error_option_name_failed_key"                  = "You must enter the name of the round";
+"Error_topic_list_failed_key"                   = "Failed to load the list of topics";
+"Error_options_not_saved_failed_key"            = "Options could not be saved. Try again later";
+"Error_send_code_failed_key"                    = "Sending code error";
+"Error_update_topic_failed_key"                 = "Update topic error";
+"Error_create_topic_failed_key"                 = "Create topic error";
+"Error_update_participant_failed_key"           = "Update participant error";
+"Error_send_invite_participant_failed_key"      = "Invitaion error";
+"Error_update_round_options_failed_key"         = "Updating round options error";
+"Error_save_variant_failed_key"                 = "Save variant error";
+"Error_add_variant_failed_key"                  = "Add variant error";
+"Error_update_history_failed_key"               = "Update history topics error";
+"Error_load_participants_failed_key"            = "Load participants error";
+"Error_vote_failed_key"                         = "Vote error";
+"Error_user_name_update_failed_key"             = "Update user name error";
+"Error_user_date_update_failed_key"             = "Update user data error";
+"Error_user_email_delete_failed_key"            = "Delete email error";
+"Error_user_email_update_failed_key"            = "Update email error";
+"Error_user_add_facebook_failed_key"            = "Add facebook account error";
+"Error_user_delete_facebook_failed_key"         = "Ddelete facebook account error";
+"Error_vote_failed_key"                         = "Vote error";
+"Error_confirm_code_key"                        = "Wrong verification code";
+"Error_size_photo_key"                          = "File size must be less than 10MB";
+
+//hints
+"Hint_list_topics_key"                          = "Here are your topics";
+"Hint_add_variants_key"                         = "Add variants";
+"Hint_add_participants_key"                     = "Add participants";
+"Hint_add_from_topics_key"                      = "No topics";
+"Hint_search_from_email_key"                    = "Search from email";
+
+//segments
+"Segment_control_authVC_registration_key"       = "Registration";
+"Segment_control_authVC_login_key"              = "Log in";
+"Segment_control_Invitation_Not_Accepted_key"   = "not accepted";
+"Segment_control_Invitation_Accepted_key"       = "accepted";
+
+"Segment_control_topic_my_key"                  = "My topics";
+"Segment_control_topic_with_me_key"             = "Topics with me";
+"Segment_control_new_topic_key"                 = "New topics";
+
+//topic list
+"Topic_list_item_status_public_key"             = "Public";
+"Topic_list_item_status_private_key"            = "Private";
+"Topic_list_item_time_year_key"                 = "years";
+"Topic_list_item_time_month_key"                = "months";
+"Topic_list_item_time_day_key"                  = "days";
+"Topic_list_item_time_hours_key"                = "hours";
+"Topic_list_item_time_minutes_key"              = "minutes";
+"Topic_list_item_time_seconds_key"              = "<1 minutes";
+"Topic_list_item_time_finish_key"               = "Finish";
+
+//topic details view controller
+"Topic_one_item_title_key"                      = "Round";
+"Topic_one_item_vote_button_key"                = "vote";
+"Topic_one_item_unvote_button_key"              = "unvote";
+
+"Next_round_button_key"                         = "Next Round";
+"Close_round_button_key"                        = "Close";
+
+//sing in
+"Sing_in_email_key"                             = "Email";
+"Sing_in_password_key"                          = "Password";
+"Sing_in_login_key"                             = "Name";
+"Sing_in_password_confirm_key"                  = "Confirm password";
+
+"Sing_in_failed_key"                            = "Something wrong happened, please check your name and password and try again";
+"Sing_in_success_key"                           = "You have successfully logged in";
+
+"Enter_login_length_failed_key"                 = "Log in field should be from 3 to 100 characters";
+"Enter_password_length_failed_key"              = "The password should be more than 6 characters";
+"Enter_confirm_password_length_failed_key"      = "Confirm password should be more than 6 characters";
+"Enter_password_confirm_failed_key"             = "Password mismatch, please try again";
+"Enter_password_length_null_failed_key"         = "Field password can not be empty";
+"Enter_email_failed_key"                        = "You typed wrong email, please try again";
+
+//rigister
+"Registr_success_confirm_key"                   = "Registration successful! Go to your email and confirm registration! After that you will be able to log in";
+
+//forgot
+"Forgot_password_send_mail_success_key"         = "There is further insturctions in a letter sent to your email";
+"Forgot_password_send_mail_failed_key"          = "Wrong email or it does not exist, please try again";
+
+//add topic
+"Add_topic_thema_key"                           = "Topic";
+"Add_topic_options_key"                         = "Options";
+"Add_topic_variants_key"                        = "Variants";
+"Add_topic_participants_key"                    = "Participants";
+"Add_topic_participants_key"                    = "Participants";
+"Add_topic_Public_topic_key"                    = "Public topic";
+"Add_topic_One_vote_key"                        = "One vote in the topic";
+"Add_topic_Add_People_key"                      = "Allow add members";
+"Add_topic_Add_Options_key"                     = "Allow add options";
+
+//date and time
+"Add_topic_Title_date_modal_key"                = "Date and Time";
+"Select_btn_modal_key"                          = "Select";
+"Add_topic_Message_date_modal_key"              = "Please choose a date and press 'Select' or 'Cancel'.";
+
+//time
+"Minutes_key"                                   = "Minutes";
+"Hours_key"                                     = "Hours";
+"Days_key"                                      = "Days";
+
+//placeholder
+"Add_topic_Theme_Placeholder_key"               = "topic name";
+"Add_topic_Variant_Placeholder_key"             = "enter the name of the option";
+
+//cells selectors title
+"Static_description_topic_key"                  = "Description of the topic";
+"Static_progress_topic_key"                     = "Pass percentage";
+"Static_time_topic_key"                         = "Deadline";
+"Static_notification_topic_key"                 = "Notification";
+"Static_notification_rounds_topic_key"          = "Rounds";
+"Static_notification_edited_topic_key"          = "On changes in the topics";
+"Static_notification_new_rounds_topic_key"      = "If a new round begins";
+"Static_language_topic_key"                     = "Notification language";
+"Static_sort_topic_key"                         = "Sort";
+"Static_sort_abc_topic_key"                     = "Alphabetical";
+"Static_sort_participants_topic_key"            = "The number of participants";
+"Static_sort_date_topic_key"                    = "By date";
+
+//btn
+"Not_installed_btn_key"                         = "Not installed";
+"Send_password_button_key"                      = "Send password";
+
+//add option
+"Add_option_textLabel_key"                      = "Name of the option";
+"Camera_photo_key"                              = "To make a photo";
+"Gallery_photo_key"                             = "Select from the gallery";
+"Delete_photo_key"                              = "Delete photo";
+
+//popup add from
+"Popup_add_from_title_key"                      = "Add from";
+"Popup_add_topic_title_key"                     = "Add from the topics";
+"Popup_add_email_title_key"                     = "Add by email";
+
+//action sheet
+"More_edit_topic_key"                           = "Edit topic";
+"More_edit_options_key"                         = "Add option";
+"More_edit_participants_key"                    = "Add participants";
+"More_show_participants_key"                    = "Show participants";
+"More_edit_share_key"                           = "Share";
+
+//invites
+"New_invites_key"                               = "New invites";
+"Invites_key"                                   = "Invites";
+
+//confirm popup
+"code_key"                                      = "Code";
+"confirm_code_header_key"                       = "Enter code from email";
+"confirm_registr_message_key"                   = "Please find the confirmation code in your e-mail. Enter it in the window or activate the account link";
+"Success_confirm_code_key"                      = "Success confirm code! Sing in to app";
+
+
+//tutorial
+"first_page_key"                                = "Welcome to JoVote app. Learn how to use JoVote app for the few steps";
+"second_page_key"                               = "Control your topics from everywhere.";
+"third_page_key"                                = "Create the topics at anytime when you want to figure out an opinion of your friends";
+"fourth_page_key"                               = "Add options for voting. Use texts, hyper links, images";
+"fifth_page_key"                                = "Invite participants into your private topic or share a link for the public topic";
+"sixth_page_key"                                = "Vote for the available options. Use the several rounds and the topic options to find out the majority opinion more precisely and on time";
+
+//account
+"Social_networks_key"                           = "Social networks";
+"Accounts_key"                                  = "Accounts";
+"Add_account_key"                               = "Add account";
+"Name_key"                                      = "Name";
+"Name_placeholder_key"                          = "Enter name";
+
+//login
+"Enter_as_guest_key"                            = "Enter as a guest";
+"Enter_facebook_key"                            = "connect with Facebook";
+"Forgot_password_btn_key"                       = "Forgot Password?";
+"Return_login_screen_key"                       = "To return to the login screen";
+"Enter_key"                                     = "Enter";
+
+"No_variant_key"                                = "No variants";
+"forgot_password_key"                           = "Forgot Password";
+
+"Check_connection_to_internet_key"              = "Check connection to internet";
+
+//one vote alert
+"You_have_already_voted"                        = "You have already voted. Would you like to change your opinion?";
+"Do_you_want_to_unvote"                         = "Do you want to unvote?";
